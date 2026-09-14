@@ -1,4 +1,4 @@
-# Read_DB_csv_File
+# Picture_Duplicates
 
 Checks pictures of one or more folders to find duplicates.
 
