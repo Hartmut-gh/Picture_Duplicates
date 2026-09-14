@@ -1,0 +1,30 @@
+# Qt Creator
+.qtcreator/
+CMakeLists.txt.user
+
+# Build-Verzeichnisse
+build/
+build-flatpak/
+
+# Flatpak
+.flatpak-builder/
+flatpak-repo/
+scripts
+
+# Lokale Build-Artefakte
+*.flatpak
+
+# Lokale Archiv-/Sicherungskopien
+archiv_*/
+
+# Nicht für Flatpak nötig
+Picture_Duplicates.desktop
+
+# Lokale Translation Files
+*.ts
+
+# flatpak File
+*.flatpak
+
+# Alte Dateien
+Programm Beschreibung.txt

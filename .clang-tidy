@@ -1,0 +1,10 @@
+Checks: >
+  -*,
+  misc-unused-includes,
+  modernize-*,
+  readability-*
+
+WarningsAsErrors: ''
+
+Checks: '-readability-implicit-bool-conversion'
+

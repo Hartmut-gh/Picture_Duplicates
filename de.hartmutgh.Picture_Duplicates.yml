@@ -1,0 +1,61 @@
+app-id: de.hartmutgh.Picture_Duplicates
+
+runtime: org.kde.Platform
+runtime-version: "6.11"
+sdk: org.kde.Sdk
+
+command: Picture_Duplicates
+
+finish-args:
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --share=ipc
+  - --filesystem=home
+  - --filesystem=/media
+  - --filesystem=/mnt
+  - --filesystem=/run/media
+  - --env=LANG=de_DE.UTF-8
+  - --env=LC_ALL=de_DE.UTF-8
+
+modules:
+  - name: exiv2
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
+      - -DEXIV2_ENABLE_BUILD_SAMPLES=OFF
+      - -DEXIV2_ENABLE_BUILD_PO=OFF
+      - -DEXIV2_ENABLE_XMP=ON
+      - -DCMAKE_BUILD_TYPE=Release
+    sources:
+      - type: archive
+        url: https://github.com/Exiv2/exiv2/archive/refs/tags/v0.27.6.tar.gz
+        sha256: f16ee5ff08b6994c66106109417857f13e711fca100ac43c6a403d4f02b59602
+
+  - name: opencv
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DBUILD_TESTS=OFF
+      - -DBUILD_PERF_TESTS=OFF
+      - -DBUILD_EXAMPLES=OFF
+      - -DBUILD_opencv_apps=OFF
+      - -DWITH_GTK=OFF
+      - -DWITH_QT=OFF
+    sources:
+      - type: archive
+        url: https://github.com/opencv/opencv/archive/refs/tags/5.0.0.tar.gz
+        sha256: b0528f5a1d379d59d4701cb28c36e22214cc51cf64594e5b56f2d3e6c0233095
+
+  - name: Picture_Duplicates
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DFLATPAK_BUILD=ON
+
+    sources:
+      - type: dir
+        path: .

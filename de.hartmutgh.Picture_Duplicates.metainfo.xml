@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+
+  <id>de.hartmutgh.Picture_Duplicates</id>
+
+  <name>Find Picture Duplicates</name>
+  <name xml:lang="de">Finde Bilder Duplikate</name>
+
+  <summary>Find Picture Duplicates</summary>
+  <summary xml:lang="de">Finde Bilder Duplikate</summary>
+
+  <icon type="stock">de.hartmutgh.Picture_Duplicates</icon>
+  <launchable type="desktop-id">de.hartmutgh.Picture_Duplicates.desktop</launchable>
+
+  <description>
+    <p xml:lang="en">
+      You can have multiple sets of folder list. Within each folderlist you can specify, which (sub-)folder is
+    </p>
+    <ul xml:lang="en">
+      <li>excluded</li>
+      <li>a reference</li>
+      <li>included</li>
+    </ul>
+    <p xml:lang="en">
+      A simple left-click on the status just changes the status of this dedicated (sub-)folder
+    </p>
+    <p xml:lang="en">
+      A shift-left-click on the status changes the status of this dedicated (sub-)folder and its subfolders.
+    </p>
+    <p xml:lang="en">
+      At the bottom of the window you can adjust the duplicate finding criteria levels:
+    </p>
+    <ul xml:lang="en">
+      <li>pHash: Lower and upper limit. Every pHash difference lower than the lower limit is always a duplicate.
+          Every pHash difference higher than the upper limit is never a duplicate.
+          All these picture pairs are excluded from the slow ORB check.
+      </li>
+      <li>ORB: Everything below the ORB limit is a duplicate, everything above not a duplicate</li>
+    </ul>
+    <p xml:lang="en">
+      Before performing a pHash comparison, a Canny Distance is calculated. Currently everything above 0.03 is always a duplicate
+      and everything above 0.1 is never a duplicate. All these picture pairs are excluded from pHash and ORB check.
+    </p>
+
+    <p xml:lang="en">
+      In the result window (appears when there is at last one duplicate pair) you have several options:
+    </p>
+    <ul xml:lang="en">
+      <li>Open the picture</li>
+      <li>Delete the picture (not available for the current master)</li>
+      <li>Switch the master</li>
+      <li>Show a difference picture (there are two kinds of differences)</li>
+      <li>Define manually that a picture is not a duplicate of the master</li>
+    </ul>
+    <p xml:lang="en">
+      The picture and compare info are stored in a database. It makes sense to clean/shrink this database from time to time.
+      You find a dedicated button for this at the top.
+    </p>
+
+
+    <p xml:lang="de">
+      Du kannst mehrere Gruppen von Ordnern haben. Innerhalb jeder Ordnerliste kannst du angeben, welcher (Unter-)Ordner
+    </p>
+    <ul xml:lang="de">
+      <li>ist ausgeschlossen</li>
+      <li>hat die Referenz-Bilder</li>
+      <li>ist eingeschlossen</li>
+    </ul>
+    <p xml:lang="de">
+      Ein einfacher Links-Klick auf den Status ändert nur den Status für diesen (Unter-)Ordner.
+    </p>
+    <p xml:lang="de">
+      Ein 'Shift' Links-Klick ändert den Status für diesen (Unter-)Ordner und allen seinen Unterordnern.
+    </p>
+    <p xml:lang="de">
+      Unten im Fenster kannst du die Kriterienlevel anpassen, die zum Finden von Bilderduplikaten verwendet werden.
+    </p>
+    <ul xml:lang="de">
+      <li>pHash: Untere und obere Grenze. Alle pHash Differenzen kleiner als die Untergrenze bedeutet immer Duplikat.
+          Alle pHash Differenzene größer als die Obergrenze ist immer ein Nicht-Duplikate.
+          Alle diese Bilder sind vom langsamen ORB Check ausgeschlossen.
+      </li>
+      <li>ORB: Alle ORB Werte unter diesem Limit sind Duplikate, alles darüber sind Nicht-Duplikate.</li>
+    </ul>
+    <p xml:lang="de">
+      Vor dem pHash-Vergleich gibt es noch einen Canny-Abstands-Vergleich. Derzeit ist alles unter 0.03 immer ein Duplikate
+      und alles über 0.1 is ein Nicht-Duplikat. Alle diese Bilderpaar sind vom pHash und ORB check ausgenommen
+    </p>
+
+    <p xml:lang="de">
+      Im Ergebnisfenster (welches erscheint, wenn es mindestens ein Duplikate-Paar gibt) hast du mehrere Möglichkeiten:
+    </p>
+    <ul xml:lang="de">
+      <li>Das Bild öffnen</li>
+      <li>Das Bild löschen (das 'Master'-Bild kann nicht gelöscht werden)</li>
+      <li>Den 'Master' wechseln</li>
+      <li>Ein Differenz-Bild anzeigen (es gibt zwei Arten von Differenzbildern</li>
+      <li>Manuell ein Bild als Nicht-Duplikat des 'Master'-Bildes definieren</li>
+    </ul>
+
+    <p xml:lang="en">
+      Die Bilder und Vergleichsinformationen werden in einer Datenbank gespeichert.
+      Es macht Sinn, von Zeit zu Zeit diese Datenbank zu säubern/verkleinern.
+      Du findest dafür oben einen entsprechenden Button.
+    </p>
+
+  </description>
+
+  <categories>
+    <category>Pictures</category>
+  </categories>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+
+  <developer id="de.github.hartmutgh">
+    <name>Hartmut-GH</name>
+  </developer>
+
+<!--
+  <url type="homepage">https://github.com/Hartmut-gh/Picture_Duplicates/</url>
+-->
+  <url type="homepage">https://.com/</url>
+
+  <releases>
+    <release version="1.0.1" date="2026-09-14">
+      <description>
+      <p>Added: Calculated 'canny' value of an image to the picture database to speed up subsequent runs.</p>
+      <p>Added: General option to exclude pictures from comparison, which are in the same folder or only compare pictures which are in the same folder.</p>
+      <p>Added: Option per folder, whether to exclude pictures from comparison, which are in the this folder.</p>
+      <p>Added: Show a list of manual 'No Duplicates'. Here you can reset the 'No-Duplicate' mark</p>
+      <p>Added: Language Switch</p>
+      <p xml:lang="de">Berechneter 'canny' Wert eines Bildes wird nun in der Bilder-Datenbank gespeichert um nachfolgende Durchläufe zu beschleunigen.</p>
+      <p xml:lang="de">Allgemeine Option hinzugefügt, entweder zum Ausschließen von Bildern vom Vergleich, die im selben Ordner sind, oder um nur Bilder zu vergelciehn, die im selben Ordner sind.</p>
+      <p xml:lang="de">Per Ordner: Option zum Ausschließen von Bildern vom Vergleich, die in diesem selben Ordner sind.</p>
+      <p xml:lang="de">Es kann jetzt eine Liste aller manuellen 'Kein Duplikat' angezeigt werden, in welcher diese Merkmal wieder gelöscht werden kann.</p>
+      <p xml:lang="de">Hinzugefügt: Sprach-Schalter</p>
+    </description>
+    </release>
+
+    <release version="1.0.0" date="2026-08-11">
+      <description>
+      <p>First official version.</p>
+      <p xml:lang="de">Erste offizielle Version.</p>
+    </description>
+    </release>
+  </releases>
+
+<!--
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/01_MainWindow.png</image>
+      <caption>Hauptfenster der Anwendung</caption>
+    </screenshot>
+
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/02_Manage_Kategorien_01_Main.png</image>
+      <caption>Kategorien verwalten</caption>
+    </screenshot>
+  </screenshots>
+-->
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+  </content_rating>
+
+</component>

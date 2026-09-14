@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/icons/64x64/Picture_Duplicates.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>resources/icons/128x128/Picture_Duplicates.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>resources/icons/256x256/Picture_Duplicates.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>resources/icons/512x512/Picture_Duplicates.png</file>
+    </qresource>
+
+    <qresource prefix="/">
+        <file>resources/icons/Picture_Duplicates.svg</file>
+    </qresource>
+
+</RCC>
