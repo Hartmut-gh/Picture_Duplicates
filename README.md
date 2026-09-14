@@ -5,6 +5,16 @@ Checks pictures of one or more folders to find duplicates.
 Überprüft Bilder aus einem oder mehreren Verzeichnissen auf Duplikate.
 
 
+## Screenshots
+
+### Hauptfenster
+![Hauptfenster](screenshots/01_MainWindow.png)
+
+
+## English
+See below
+
+
 ## Deutsch
 ### Funktionen
 
@@ -54,69 +64,25 @@ Checks pictures of one or more folders to find duplicates.
 - Das Suchen nach Duplikaten benötigt mehrere Programm-Schritte. Das Programm zeigt ganz unten den aktuellen Fortschritt an.
 
 
-## English
-### Features
-
-- You can create several "sets" of folders.
-
-- You can add one or more folders to each set. Subfolders are automatically added as well.
-
-- You can select for each folder, whether
-    - to include it.
-    - to include it as reference folder.
-    - to exclude it.
-
-- You can select as well, whether the search for duplicates should not be done within the same folder (both files are in the same folder).
-
-- There is also a general option (in this case the individual setting in the line above this one is not used)
-   - for all folders do not look for duplicates in the same folder.
-   - for all folders only look in the same folder for duplicates.
-
-- To find duplicates there are three calculation methods. For each of them you can set limits.
-     1. pHash - distance   (below a limit: Always a duplicate, above a limit: Never a duplicate)
-     2. canny - difference (below a limit: Always a duplicate, above a limit: Never a duplicate)
-     3. ORB   - difference (above a limit: a duplicate)
-  If a calculation method already delivers a clear result, no other method will be used. This save a lot of CPU load.
-  pHash is the fastest, canny is a bit slower and ORB needs quite some CPU load.
-
-- To speed up even more, pHash, canny and ORB values of each picture, which was analyzed, are stored in a database.
-  As well the ORB differences are stored as they need a lot of CPU power.
-
-- The database can be shrinked, of there are many pictures which are deleted meanwhile.
-
-- The program tries to search for picture data in the database:
-     - Using the complete file path (file size and file data must be equal)
-     - Using the file name only     (file size and file data must be equal)
-     - Using the file name stripped from a [...] prefix (file size and file data must be equal)
-  Only if no file information was found by this approach, the picture is considered as unknown and the needed values are calculated.
-  The program can also recognize whether a file was moved into another folder. In this case the path information is updated in the database.
-
-- After finding of the duplicates there is a new window. Here you can
-    - open a picture in the picture viewer of your PC
-    - delete a picture (the 'master' picture cannot be deleted)
-    - compare pictures (using difference and XOR methods)
-    - change a picture to 'master'
-    - define manually that a picture pair is not a duplicate
-
-- You can show a list of all the "No Duplicate" pairs where you can remove this indicator.
-
-- The search for duplicates need multiple program steps. The program shows the progress at the bottom of the main window.
-
-
-## Screenshots
-
-### Hauptfenster
-![Hauptfenster](screenshots/01_MainWindow.png)
-
-
-## Voraussetzungen
+### Voraussetzungen
 
 - Qt 6.11 oder höher
 - CMake 3.16 oder höher
+- OpenCV 5.x
 - Ein C++-Compiler
 
 
-## Build
+### OpenCV
+
+Das Projekt benötigt **OpenCV 5.0.0**.
+
+- [OpenCV 5.0.0 herunterladen](https://github.com/opencv/opencv/archive/refs/tags/5.0.0.tar.gz)
+- [Offizielle OpenCV-Website](https://opencv.org/)
+
+OpenCV muss auf dem System installiert sein und von CMake gefunden werden können.
+
+
+### Build
 
 Das Projekt verwendet CMake und Qt.
 
@@ -136,13 +102,117 @@ Alternativ kann das Projekt auch direkt mit CMake gebaut werden:
 
    ```
 
-## Flatpak
+### Flatpak
 
 Die fertige Version ist als Flatpak unter [Releases](../../releases) verfügbar.
 
 
-## Lizenz
+### Lizenz
 
 Dieses Projekt steht unter der **GNU General Public License v3.0 or later (GPL-3.0-or-later)**.
 
 Siehe die Datei `LICENSE` für den vollständigen Lizenztext.
+
+
+## English
+### Features
+
+- You can create several "sets" of folders.
+
+- You can add one or more folders to each set. Subfolders are added automatically.
+
+- You can select for each folder, whether to
+    - include it.
+    - use it as reference folder.
+    - exclude it.
+
+- You can also select whether duplicates should not be searched for within the same folder (i.e. both files are in the same folder).
+
+- There are three calculation methods for finding duplicates. For each method, you can define thresholds:
+   - Do not search for duplicates within the same folder.
+   - Only search for duplicates within the same folder.
+
+- There are three calculation methods for finding duplicates. For each method, you can define thresholds:
+     1. **pHash – distance** (below the threshold: Always a duplicate, above the threshold: Never a duplicate)
+     2. **canny - difference** (below the threshold: Always a duplicate, above the threshold: Never a duplicate)
+     3. **ORB - difference** (above the threshold: a duplicate)
+
+  If a calculation method already produces a clear result, no other method is used. This saves a lot of CPU time.
+  pHash is the fastest, Canny is somewhat slower, and ORB requires significantly more CPU time.
+
+- To speed up the process even further, the pHash, Canny, and ORB values of every analyzed picture are stored in a database.
+  ORB differences are also stored because calculating them requires a lot of CPU time.
+
+- The database can be shrunk if many pictures have been deleted in the meantime.
+
+- The program tries to find picture information in the database
+     - Using the complete file path (file size and file date must match).
+     - Using the file name only     (file size and file date must match)
+     - Using the file name with a `[...]` prefix removed (file size and file date must match).
+
+  Only if no file information is found using these methods, the picture considered as unknown and the required values are calculated.
+
+  The program can also detect when a file has been moved to another folder. In this case, the path information is updated in the database.
+
+- After duplicates have been found, a new window is displayed. Here you can
+    - open a picture in the default picture viewer of your PC.
+    - delete a picture (the 'master' picture cannot be deleted)
+    - compare pictures (using difference and XOR methods)
+    - change a picture to 'master'
+    - manually define a picture pair as not being duplicates.
+
+- You can display a list of all "No Duplicate" pairs and remove this indicator if needed.
+
+- The duplicate search consists of multiple processing steps. The program displays the progress at the bottom of the main window.
+
+
+### Requirements
+
+- Qt 6.11 or higher
+- CMake 3.16 or higher
+- OpenCV 5.x
+- A C++-Compiler
+
+
+### OpenCV
+
+The project needs **OpenCV 5.0.0**.
+
+- [Download OpenCV 5.0.0](https://github.com/opencv/opencv/archive/refs/tags/5.0.0.tar.gz)
+- [Official OpenCV-Website](https://opencv.org/)
+
+OpenCV must be installed on the system and must be discoverable by CMake.
+
+
+## Build
+
+The project uses CMake and Qt.
+
+To build the project, it can be opened in **Qt Creator**:
+
+1. Open `CMakeLists.txt` in Qt Creator.
+2. Select a suitable Qt/CMake kit.
+3. Let Qt Creator configure the project.
+4. Build the project.
+
+Alternatively, the projekt can be built directly with CMake:
+   ```bash
+   mkdir build
+   cd build
+   cmake ..
+   cmake --build .
+
+   ```
+
+## Flatpak
+
+A Flatpak version is available here: [Releases](../../releases)
+
+
+## License
+
+This project uses the **GNU General Public License v3.0 or later (GPL-3.0-or-later)**.
+
+See the file `LICENSE` for the complete license text.
+
+
