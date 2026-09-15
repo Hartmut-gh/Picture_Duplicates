@@ -69,6 +69,7 @@ See below
 - Qt 6.11 oder höher
 - CMake 3.16 oder höher
 - OpenCV 5.x
+- SQLite 3.x oder höher
 - Ein C++-Compiler
 
 
@@ -171,6 +172,7 @@ Siehe die Datei `LICENSE` für den vollständigen Lizenztext.
 - Qt 6.11 or higher
 - CMake 3.16 or higher
 - OpenCV 5.x
+- SQLite 3.x or higher
 - A C++-Compiler
 
 

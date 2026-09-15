@@ -20,11 +20,5 @@ archiv_*/
 # Nicht für Flatpak nötig
 Picture_Duplicates.desktop
 
-# Lokale Translation Files
-*.ts
-
-# flatpak File
-*.flatpak
-
 # Alte Dateien
 Programm Beschreibung.txt
