@@ -10,7 +10,7 @@
   <summary xml:lang="de">Finde Bilder Duplikate</summary>
 
   <icon type="stock">io.github.hartmut_gh.Picture_Duplicates</icon>
-  <launchable type="desktop-id">io.guthub.hartmut_gh.Picture_Duplicates.desktop</launchable>
+  <launchable type="desktop-id">io.github.hartmut_gh.Picture_Duplicates.desktop</launchable>
 
   <description>
     <p xml:lang="en">
@@ -18,152 +18,162 @@
       picture viewer, deletion, manual quick comparison and manual indicating of non-duplicate.
     </p>
     <p xml:lang="en">
-      You can create several "sets" of folders.
-    </p>
-    <p xml:lang="en">
-      You can add one or more folders to each set. Subfolders are added automatically.
-    </p>
-    <p xml:lang="en">
-      You can select for each folder, whether to
-    </p>
-    <ul xml:lang="en">
-      <li>include it</li>
-      <li>use it as reference folder.</li>
-      <li>exclude it.</li>
-    </ul>
-    <p xml:lang="en">
-      You can also select whether duplicates should not be searched for within the same folder (i.e. both files are in the same folder).
-    </p>
-    <p xml:lang="en">
-      There are three calculation methods for finding duplicates. For each method, you can define thresholds:
-    </p>
-    <ul xml:lang="en">
-      <li>Do not search for duplicates within the same folder.</li>
-      <li>Only search for duplicates within the same folder.</li>
-    </ul>
-    <p xml:lang="en">
-      There are three calculation methods for finding duplicates. For each method, you can define thresholds:
-    </p>
-    <ul xml:lang="en">
-      <li>pHash – distance (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
-      <li>canny - difference (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
-      <li>ORB - difference (above the threshold: a duplicate)</li>
-    </ul>
-    <p xml:lang="en">
-      If a calculation method already produces a clear result, no other method is used. This saves a lot of CPU time.
-      pHash is the fastest, Canny is somewhat slower, and ORB requires significantly more CPU time.
-    </p>
-    <p xml:lang="en">
-      To speed up the process even further, the pHash, Canny, and ORB values of every analyzed picture are stored in a database.
-      ORB differences are also stored because calculating them requires a lot of CPU time.
-    </p>
-    <p xml:lang="en">
-      The database can be shrunk if many pictures have been deleted in the meantime.
-    </p>
-    <p xml:lang="en">
-      The program tries to find picture information in the database
-    </p>
-    <ul xml:lang="en">
-      <li>Using the complete file path (file size and file date must match).</li>
-      <li>Using the file name only     (file size and file date must match)</li>
-      <li>Using the file name with a `[...]` prefix removed (file size and file date must match).</li>
-    </ul>
-    <p xml:lang="en">
-      Only if no file information is found using these methods, the picture considered as unknown and the required values are calculated.
-    </p>
-    <p xml:lang="en">
-      The program can also detect when a file has been moved to another folder. In this case, the path information is updated in the database.
-    </p>
-    <p xml:lang="en">
-      After duplicates have been found, a new window is displayed. Here you can
-    </p>
-    <ul xml:lang="en">
-      <li>open a picture in the default picture viewer of your PC.</li>
-      <li>delete a picture (the 'master' picture cannot be deleted)</li>
-      <li>compare pictures (using difference and XOR methods)</li>
-      <li>change a picture to 'master'</li>
-      <li>manually define a picture pair as not being duplicates.</li>
-    </ul>
-    <p xml:lang="en">
-      You can display a list of all "No Duplicate" pairs and remove this indicator if needed.
-    </p>
-    <p xml:lang="en">
-      The duplicate search consists of multiple processing steps. The program displays the progress at the bottom of the main window.
-    </p>
-
-
-    <p xml:lang="en">
       Dieses Program erkenne Bilder-Duplikate und bietet an, diese in einem extern Bildbetrachter-Programm zu öffnen, zu löschen, manuell
       schnell miteindern zu vergleichen un gegebenfalls als "Nicht-Duplkat" zu kennzeichnen.
+    </p>
+
+    <p xml:lang="en">
+      You can create several "sets" of folders.
     </p>
     <p xml:lang="de">
       Es können mehrere "Sets" von Verzeichnissen angelegt werden.
     </p>
+
+    <p xml:lang="en">
+      You can add one or more folders to each set. Subfolders are added automatically.
+    </p>
     <p xml:lang="de">
       Zu jedem "Set" können ein oder mehrere Verzeichnisse hinzugefügt werden. Die Unterverzeichnisse von denen werden automatisch auch hinzugefügt.
+    </p>
+
+    <p xml:lang="en">
+      You can select for each folder, whether to
     </p>
     <p xml:lang="de">
       Für jedes Verzeichnis kann ausgewählt werden, ob es
     </p>
-    <ul xml:lang="de">
-      <li>eingeschlossen ist.</li>
-      <li>eingeschlossen und ein Referenz-Verzeichnis ist.</li>
-      <li>ausgeschlossen ist.</li>
+
+    <ul>
+      <li xml:lang="en">include it</li>
+      <li xml:lang="en">use it as reference folder.</li>
+      <li xml:lang="en">exclude it.</li>
+      <li xml:lang="de">eingeschlossen ist.</li>
+      <li xml:lang="de">eingeschlossen und ein Referenz-Verzeichnis ist.</li>
+      <li xml:lang="de">ausgeschlossen ist.</li>
     </ul>
+
+    <p xml:lang="en">
+      You can also select whether duplicates should not be searched for within the same folder (i.e. both files are in the same folder).
+    </p>
     <p xml:lang="de">
       Zudem kann pro Verzeichnis ausgewählt werden, ob innerhalb des Verzeichnisses nach Duplikaten gesucht wird (beide Dateien sind im selben Verzeichnis).
+    </p>
+
+    <p xml:lang="en">
+      There are three calculation methods for finding duplicates. For each method, you can define thresholds:
     </p>
     <p xml:lang="de">
       Auch für alle Ordner kann generell ausgewählt werden (dann gelten nicht die individuelle Einstellung siehe die Zeile über dieser)
     </p>
-    <ul xml:lang="de">
-      <li>Generell keine Duplikats-Sucher im selben Verzeichnis</li>
-      <li>Nur Duplikats-Sucher im selben Verzeichnis</li>
+
+    <ul>
+      <li xml:lang="en">Do not search for duplicates within the same folder.</li>
+      <li xml:lang="en">Only search for duplicates within the same folder.</li>
+      <li xml:lang="de">Generell keine Duplikats-Sucher im selben Verzeichnis</li>
+      <li xml:lang="de">Nur Duplikats-Sucher im selben Verzeichnis</li>
     </ul>
+
+    <p xml:lang="en">
+      There are three calculation methods for finding duplicates. For each method, you can define thresholds:
+    </p>
     <p xml:lang="de">
       Zur Duplikatssuche werden bis zu drei Verfahren angewandt. Für jedes Verfahren können Grenzen gesetzt werden.
     </p>
-    <ul xml:lang="de">
-      <li>pHash - Abstand (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
-      <li>canny - Unterschied (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
-      <li>ORB   - Unterschied (oberhalb einer Grenze: ein Duplikat)</li>
+
+    <ul>
+      <li xml:lang="en">pHash – distance (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
+      <li xml:lang="en">canny - difference (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
+      <li xml:lang="en">ORB - difference (above the threshold: a duplicate)</li>
+      <li xml:lang="de">pHash - Abstand (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
+      <li xml:lang="de">canny - Unterschied (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
+      <li xml:lang="de">ORB   - Unterschied (oberhalb einer Grenze: ein Duplikat)</li>
     </ul>
+
+    <p xml:lang="en">
+      If a calculation method already produces a clear result, no other method is used. This saves a lot of CPU time.
+      pHash is the fastest, Canny is somewhat slower, and ORB requires significantly more CPU time.
+    </p>
     <p xml:lang="de">
       Wenn ein Verfahren bereits ein eindeutiges Ergebnis liefert, wird kein weiteres Verfahren mehr verwendet. Dadurch wird viel Rechenleistung gespart.
       pHash geht am schnellsten, canny bereits etwas langsamer und ORB ist sehr rechenintensiv.
+    </p>
+
+    <p xml:lang="en">
+      To speed up the process even further, the pHash, Canny, and ORB values of every analyzed picture are stored in a database.
+      ORB differences are also stored because calculating them requires a lot of CPU time.
     </p>
     <p xml:lang="de">
       Zur weiteren Beschleunigung werden pHash, canny und ORB Werte von jedem Bild, das schon einmal analysiert wurde, in einer Datenbank gespeichert.
       Auch ORB Differenten werden in der Datenbank gespeichert, weil sie sonst immer sehr zeitaufwendig neu berechnet werden müssten.
     </p>
+
+    <p xml:lang="en">
+      The database can be shrunk if many pictures have been deleted in the meantime.
+    </p>
     <p xml:lang="de">
       Diese Datenbank lässt sich bereinigen, falls inzwischen viele Bilder gelöscht wurden.
+    </p>
+
+    <p xml:lang="en">
+      The program tries to find picture information in the database
     </p>
     <p xml:lang="de">
       Das Programm versucht auf mehreren Wegen eine Bilddatei in der Datenbank zu finden:
     </p>
-    <ul xml:lang="de">
-      <li>Vollständiger Datei-Pfad  (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
-      <li>Nur Dateiname selbst      (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
-      <li>Dateiname ohne einen [...] Prefix (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
-      <li>eingeschlossen</li>
+
+    <ul>
+      <li xml:lang="en">Using the complete file path (file size and file date must match).</li>
+      <li xml:lang="en">Using the file name only     (file size and file date must match)</li>
+      <li xml:lang="en">Using the file name with a `[...]` prefix removed (file size and file date must match).</li>
+      <li xml:lang="de">Vollständiger Datei-Pfad  (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
+      <li xml:lang="de">Nur Dateiname selbst      (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
+      <li xml:lang="de">Dateiname ohne einen [...] Prefix (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
     </ul>
+
+    <p xml:lang="en">
+      Only if no file information is found using these methods, the picture considered as unknown and the required values are calculated.
+    </p>
     <p xml:lang="de">
       Nur wenn so keine Dateiinformationen in der Datenbank gefunden werden, wird das Bild als unbekannt gewertet und die Werte berechnet.
       Das Programm erkennt so auch, on eine Datei inzwischen in einem anderen Ordner ist und speichert den neuen Pfad in der Datenbank ab.
     </p>
+
+    <p xml:lang="en">
+      The program can also detect when a file has been moved to another folder. In this case, the path information is updated in the database.
+    </p>
+    <p xml:lang="de">
+      Das Programm erkennt auch, wenn eine Datei in ein anderes Verzeichnis verschoben wurde. In diesem Fall wird der Datei-Pfad in der Datenbank geändert.
+    </p>
+
+    <p xml:lang="en">
+      After duplicates have been found, a new window is displayed. Here you can
+    </p>
     <p xml:lang="de">
       Nach dem Finden der Duplikate öffnet sich ein neues Fenster. In dem kann man nun
     </p>
-    <ul xml:lang="de">
-      <li>Bilder im Bildbetrachter des Rechners öffnen</li>
-      <li>Bilder löschen (das 'Master' Bild kann nicht gelöscht werden)</li>
-      <li>Bilder vergleichen (über Differenz-Methode bzw. XOR-Methode)</li>
-      <li>Ein Bild zum 'Master'-Bild machen.</li>
-      <li>Manuell angeben, dass ein Vergleichspaar doch keine Duplikate sind (diese Information wird auch in der Datenbank gespeichert).</li>
+
+    <ul>
+      <li xml:lang="en">open a picture in the default picture viewer of your PC.</li>
+      <li xml:lang="en">delete a picture (the 'master' picture cannot be deleted)</li>
+      <li xml:lang="en">compare pictures (using difference and XOR methods)</li>
+      <li xml:lang="en">change a picture to 'master'</li>
+      <li xml:lang="en">manually define a picture pair as not being duplicates.</li>
+      <li xml:lang="de">Bilder im Bildbetrachter des Rechners öffnen</li>
+      <li xml:lang="de">Bilder löschen (das 'Master' Bild kann nicht gelöscht werden)</li>
+      <li xml:lang="de">Bilder vergleichen (über Differenz-Methode bzw. XOR-Methode)</li>
+      <li xml:lang="de">Ein Bild zum 'Master'-Bild machen.</li>
+      <li xml:lang="de">Manuell angeben, dass ein Vergleichspaar doch keine Duplikate sind (diese Information wird auch in der Datenbank gespeichert).</li>
     </ul>
+
+    <p xml:lang="en">
+      You can display a list of all "No Duplicate" pairs and remove this indicator if needed.
+    </p>
     <p xml:lang="de">
       Es lassen sich alle manuellen "Kein-Duplikat" -Bilderpaare anzeigen und diese Indikation wieder entfernen.
+    </p>
+
+    <p xml:lang="en">
+      The duplicate search consists of multiple processing steps. The program displays the progress at the bottom of the main window.
     </p>
     <p xml:lang="de">
       Das Suchen nach Duplikaten benötigt mehrere Programm-Schritte. Das Programm zeigt ganz unten den aktuellen Fortschritt an.
