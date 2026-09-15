@@ -1,5 +1,5 @@
 # app-id: de.hartmutgh.Picture_Duplicates
-app-id: io.github.hartmut-gh.Picture_Duplicates
+app-id: io.github.hartmut_gh.Picture_Duplicates
 
 runtime: org.kde.Platform
 runtime-version: "6.11"
@@ -71,5 +71,5 @@ modules:
 
     sources:
       - type: git
-      url: https://github.com/hartmutgh/Picture_Duplicates.git
-      commit: d2cbe80
+        url: https://github.com/hartmut-gh/Picture_Duplicates.git
+        commit: d2cbe80

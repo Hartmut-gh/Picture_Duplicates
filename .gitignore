@@ -9,7 +9,8 @@ build-flatpak/
 # Flatpak
 .flatpak-builder/
 flatpak-repo/
-scripts
+scripts/
+repo/
 
 # Lokale Build-Artefakte
 *.flatpak

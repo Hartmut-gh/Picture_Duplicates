@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
 
-  <id>io.github.hartmut-gh.Picture_Duplicates</id>
+  <id>io.github.hartmut_gh.Picture_Duplicates</id>
 
   <name>Find Picture Duplicates</name>
   <name xml:lang="de">Finde Bilder Duplikate</name>
@@ -9,10 +9,14 @@
   <summary>Find Picture Duplicates</summary>
   <summary xml:lang="de">Finde Bilder Duplikate</summary>
 
-  <icon type="stock">de.hartmutgh.Picture_Duplicates</icon>
-  <launchable type="desktop-id">de.hartmutgh.Picture_Duplicates.desktop</launchable>
+  <icon type="stock">io.github.hartmut_gh.Picture_Duplicates</icon>
+  <launchable type="desktop-id">io.guthub.hartmut_gh.Picture_Duplicates.desktop</launchable>
 
   <description>
+    <p xml:lang="en">
+      This program identifies duplicated pictures and to offer the user possibilities of opening the picture in an external
+      picture viewer, deletion, manual quick comparison and manual indicating of non-duplicate.
+    </p>
     <p xml:lang="en">
       You can create several "sets" of folders.
     </p>
@@ -41,14 +45,14 @@
       There are three calculation methods for finding duplicates. For each method, you can define thresholds:
     </p>
     <ul xml:lang="en">
-      <li><b>pHash – distance</b> (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
-      <li><b>canny - difference</b>b> (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
-      <li><b>ORB - difference</b>b> (above the threshold: a duplicate)</li>
+      <li>pHash – distance (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
+      <li>canny - difference (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
+      <li>ORB - difference (above the threshold: a duplicate)</li>
     </ul>
     <p xml:lang="en">
       If a calculation method already produces a clear result, no other method is used. This saves a lot of CPU time.
       pHash is the fastest, Canny is somewhat slower, and ORB requires significantly more CPU time.
-    </p
+    </p>
     <p xml:lang="en">
       To speed up the process even further, the pHash, Canny, and ORB values of every analyzed picture are stored in a database.
       ORB differences are also stored because calculating them requires a lot of CPU time.
@@ -88,6 +92,10 @@
     </p>
 
 
+    <p xml:lang="en">
+      Dieses Program erkenne Bilder-Duplikate und bietet an, diese in einem extern Bildbetrachter-Programm zu öffnen, zu löschen, manuell
+      schnell miteindern zu vergleichen un gegebenfalls als "Nicht-Duplkat" zu kennzeichnen.
+    </p>
     <p xml:lang="de">
       Es können mehrere "Sets" von Verzeichnissen angelegt werden.
     </p>
@@ -116,9 +124,9 @@
       Zur Duplikatssuche werden bis zu drei Verfahren angewandt. Für jedes Verfahren können Grenzen gesetzt werden.
     </p>
     <ul xml:lang="de">
-      <li><b>pHash - Abstand</b> (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
-      <li><b>canny - Unterschied</b> (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
-      <li><b>ORB   - Unterschied</b> (oberhalb einer Grenze: ein Duplikat)</li>
+      <li>pHash - Abstand (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
+      <li>canny - Unterschied (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
+      <li>ORB   - Unterschied (oberhalb einer Grenze: ein Duplikat)</li>
     </ul>
     <p xml:lang="de">
       Wenn ein Verfahren bereits ein eindeutiges Ergebnis liefert, wird kein weiteres Verfahren mehr verwendet. Dadurch wird viel Rechenleistung gespart.
@@ -164,20 +172,18 @@
   </description>
 
   <categories>
-    <category>Pictures</category>
+     <category>Graphics</category>
+     <category>Utility</category>
   </categories>
 
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
 
-  <developer id="de.github.hartmutgh">
+  <developer id="de.github.hartmut_gh">
     <name>Hartmut-GH</name>
   </developer>
 
-<!--
   <url type="homepage">https://github.com/Hartmut-gh/Picture_Duplicates/</url>
--->
-  <url type="homepage">https://.com/</url>
 
   <releases>
     <release version="1.0.1" date="2026-09-14">
@@ -203,19 +209,12 @@
     </release>
   </releases>
 
-<!--
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/01_MainWindow.png</image>
       <caption>Hauptfenster der Anwendung</caption>
     </screenshot>
-
-    <screenshot>
-      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/02_Manage_Kategorien_01_Main.png</image>
-      <caption>Kategorien verwalten</caption>
-    </screenshot>
   </screenshots>
--->
 
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>

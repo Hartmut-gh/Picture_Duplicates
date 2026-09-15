@@ -211,6 +211,10 @@ install(
     FILES de.hartmutgh.Picture_Duplicates.metainfo.xml
     DESTINATION share/metainfo
 )
+install(
+    FILES io.github.hartmut_gh.Picture_Duplicates.metainfo.xml
+    DESTINATION share/metainfo
+)
 
 message(STATUS "TRANSLATION_DIR: ${TRANSLATION_DIR}")
 install(FILES ${QM_FILES}
@@ -221,6 +225,11 @@ install(
     FILES resources/icons/Picture_Duplicates.svg
     DESTINATION share/icons/hicolor/scalable/apps
     RENAME de.hartmutgh.Picture_Duplicates.svg
+)
+install(
+    FILES resources/icons/Picture_Duplicates.svg
+    DESTINATION share/icons/hicolor/scalable/apps
+    RENAME io.github.hartmut_gh.Picture_Duplicates.svg
 )
 install(
     FILES resources/icons/64x64/Picture_Duplicates.png
