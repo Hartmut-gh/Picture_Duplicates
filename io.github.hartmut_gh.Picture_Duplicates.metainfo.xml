@@ -13,11 +13,11 @@
   <launchable type="desktop-id">io.github.hartmut_gh.Picture_Duplicates.desktop</launchable>
 
   <description>
-    <p xml:lang="en">
+    <p>
       This program identifies duplicated pictures and to offer the user possibilities of opening the picture in an external
       picture viewer, deletion, manual quick comparison and manual indicating of non-duplicate.
     </p>
-    <p xml:lang="en">
+    <p xml:lang="de">
       Dieses Program erkenne Bilder-Duplikate und bietet an, diese in einem extern Bildbetrachter-Programm zu öffnen, zu löschen, manuell
       schnell miteindern zu vergleichen un gegebenfalls als "Nicht-Duplkat" zu kennzeichnen.
     </p>
