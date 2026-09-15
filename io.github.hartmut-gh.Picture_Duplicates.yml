@@ -1,5 +1,5 @@
-app-id: de.hartmutgh.Picture_Duplicates
-# app-id: io.github.com.hartmut-gh.Picture_Duplicates
+# app-id: de.hartmutgh.Picture_Duplicates
+app-id: io.github.hartmut-gh.Picture_Duplicates
 
 runtime: org.kde.Platform
 runtime-version: "6.11"
@@ -20,6 +20,19 @@ finish-args:
 #  - --env=LC_ALL=de_DE.UTF-8
 
 modules:
+  - name: qt-avif-image-plugin
+    buildsystem: cmake-ninja
+    builddir: true
+
+    sources:
+      - type: git
+        url: https://github.com/novomesk/qt-avif-image-plugin.git
+        commit: 6af0bb0
+        ## Hint:  Commit taken from 'git log -1 --oneline' command
+
+      - type: patch
+        path: qt-avif-qt6.patch
+
   - name: exiv2
     buildsystem: cmake-ninja
     config-opts:
@@ -57,5 +70,6 @@ modules:
       - -DFLATPAK_BUILD=ON
 
     sources:
-      - type: dir
-        path: .
+      - type: git
+      url: https://github.com/hartmutgh/Picture_Duplicates.git
+      commit: d2cbe80

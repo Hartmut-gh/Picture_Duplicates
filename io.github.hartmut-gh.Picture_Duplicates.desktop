@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Comment=Finds duplicated pictures
+Comment[de]=Findet Bilder Duplikate
+Name=Find Picture Duplicates (Flatpak)
+Name[de]=Finde Bilder Duplikate (Flatpak)
+Exec=Picture_Duplicates
+Icon=io.github.hartmut-gh.Picture_Duplicates
+Categories=Graphics
+StartupWMClass=Picture_Duplicates
+Keywords=picture;image;duplicate
+Keywords[de]=Bild;Duplikate
+Terminal=false

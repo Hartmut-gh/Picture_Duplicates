@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+
+  <id>io.github.hartmut-gh.Picture_Duplicates</id>
+
+  <name>Find Picture Duplicates</name>
+  <name xml:lang="de">Finde Bilder Duplikate</name>
+
+  <summary>Find Picture Duplicates</summary>
+  <summary xml:lang="de">Finde Bilder Duplikate</summary>
+
+  <icon type="stock">de.hartmutgh.Picture_Duplicates</icon>
+  <launchable type="desktop-id">de.hartmutgh.Picture_Duplicates.desktop</launchable>
+
+  <description>
+    <p xml:lang="en">
+      You can create several "sets" of folders.
+    </p>
+    <p xml:lang="en">
+      You can add one or more folders to each set. Subfolders are added automatically.
+    </p>
+    <p xml:lang="en">
+      You can select for each folder, whether to
+    </p>
+    <ul xml:lang="en">
+      <li>include it</li>
+      <li>use it as reference folder.</li>
+      <li>exclude it.</li>
+    </ul>
+    <p xml:lang="en">
+      You can also select whether duplicates should not be searched for within the same folder (i.e. both files are in the same folder).
+    </p>
+    <p xml:lang="en">
+      There are three calculation methods for finding duplicates. For each method, you can define thresholds:
+    </p>
+    <ul xml:lang="en">
+      <li>Do not search for duplicates within the same folder.</li>
+      <li>Only search for duplicates within the same folder.</li>
+    </ul>
+    <p xml:lang="en">
+      There are three calculation methods for finding duplicates. For each method, you can define thresholds:
+    </p>
+    <ul xml:lang="en">
+      <li><b>pHash – distance</b> (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
+      <li><b>canny - difference</b>b> (below the threshold: Always a duplicate, above the threshold: Never a duplicate)</li>
+      <li><b>ORB - difference</b>b> (above the threshold: a duplicate)</li>
+    </ul>
+    <p xml:lang="en">
+      If a calculation method already produces a clear result, no other method is used. This saves a lot of CPU time.
+      pHash is the fastest, Canny is somewhat slower, and ORB requires significantly more CPU time.
+    </p
+    <p xml:lang="en">
+      To speed up the process even further, the pHash, Canny, and ORB values of every analyzed picture are stored in a database.
+      ORB differences are also stored because calculating them requires a lot of CPU time.
+    </p>
+    <p xml:lang="en">
+      The database can be shrunk if many pictures have been deleted in the meantime.
+    </p>
+    <p xml:lang="en">
+      The program tries to find picture information in the database
+    </p>
+    <ul xml:lang="en">
+      <li>Using the complete file path (file size and file date must match).</li>
+      <li>Using the file name only     (file size and file date must match)</li>
+      <li>Using the file name with a `[...]` prefix removed (file size and file date must match).</li>
+    </ul>
+    <p xml:lang="en">
+      Only if no file information is found using these methods, the picture considered as unknown and the required values are calculated.
+    </p>
+    <p xml:lang="en">
+      The program can also detect when a file has been moved to another folder. In this case, the path information is updated in the database.
+    </p>
+    <p xml:lang="en">
+      After duplicates have been found, a new window is displayed. Here you can
+    </p>
+    <ul xml:lang="en">
+      <li>open a picture in the default picture viewer of your PC.</li>
+      <li>delete a picture (the 'master' picture cannot be deleted)</li>
+      <li>compare pictures (using difference and XOR methods)</li>
+      <li>change a picture to 'master'</li>
+      <li>manually define a picture pair as not being duplicates.</li>
+    </ul>
+    <p xml:lang="en">
+      You can display a list of all "No Duplicate" pairs and remove this indicator if needed.
+    </p>
+    <p xml:lang="en">
+      The duplicate search consists of multiple processing steps. The program displays the progress at the bottom of the main window.
+    </p>
+
+
+    <p xml:lang="de">
+      Es können mehrere "Sets" von Verzeichnissen angelegt werden.
+    </p>
+    <p xml:lang="de">
+      Zu jedem "Set" können ein oder mehrere Verzeichnisse hinzugefügt werden. Die Unterverzeichnisse von denen werden automatisch auch hinzugefügt.
+    </p>
+    <p xml:lang="de">
+      Für jedes Verzeichnis kann ausgewählt werden, ob es
+    </p>
+    <ul xml:lang="de">
+      <li>eingeschlossen ist.</li>
+      <li>eingeschlossen und ein Referenz-Verzeichnis ist.</li>
+      <li>ausgeschlossen ist.</li>
+    </ul>
+    <p xml:lang="de">
+      Zudem kann pro Verzeichnis ausgewählt werden, ob innerhalb des Verzeichnisses nach Duplikaten gesucht wird (beide Dateien sind im selben Verzeichnis).
+    </p>
+    <p xml:lang="de">
+      Auch für alle Ordner kann generell ausgewählt werden (dann gelten nicht die individuelle Einstellung siehe die Zeile über dieser)
+    </p>
+    <ul xml:lang="de">
+      <li>Generell keine Duplikats-Sucher im selben Verzeichnis</li>
+      <li>Nur Duplikats-Sucher im selben Verzeichnis</li>
+    </ul>
+    <p xml:lang="de">
+      Zur Duplikatssuche werden bis zu drei Verfahren angewandt. Für jedes Verfahren können Grenzen gesetzt werden.
+    </p>
+    <ul xml:lang="de">
+      <li><b>pHash - Abstand</b> (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
+      <li><b>canny - Unterschied</b> (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)</li>
+      <li><b>ORB   - Unterschied</b> (oberhalb einer Grenze: ein Duplikat)</li>
+    </ul>
+    <p xml:lang="de">
+      Wenn ein Verfahren bereits ein eindeutiges Ergebnis liefert, wird kein weiteres Verfahren mehr verwendet. Dadurch wird viel Rechenleistung gespart.
+      pHash geht am schnellsten, canny bereits etwas langsamer und ORB ist sehr rechenintensiv.
+    </p>
+    <p xml:lang="de">
+      Zur weiteren Beschleunigung werden pHash, canny und ORB Werte von jedem Bild, das schon einmal analysiert wurde, in einer Datenbank gespeichert.
+      Auch ORB Differenten werden in der Datenbank gespeichert, weil sie sonst immer sehr zeitaufwendig neu berechnet werden müssten.
+    </p>
+    <p xml:lang="de">
+      Diese Datenbank lässt sich bereinigen, falls inzwischen viele Bilder gelöscht wurden.
+    </p>
+    <p xml:lang="de">
+      Das Programm versucht auf mehreren Wegen eine Bilddatei in der Datenbank zu finden:
+    </p>
+    <ul xml:lang="de">
+      <li>Vollständiger Datei-Pfad  (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
+      <li>Nur Dateiname selbst      (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
+      <li>Dateiname ohne einen [...] Prefix (Dateigröße und Datum der letzten Änderung müssen gleich sein)</li>
+      <li>eingeschlossen</li>
+    </ul>
+    <p xml:lang="de">
+      Nur wenn so keine Dateiinformationen in der Datenbank gefunden werden, wird das Bild als unbekannt gewertet und die Werte berechnet.
+      Das Programm erkennt so auch, on eine Datei inzwischen in einem anderen Ordner ist und speichert den neuen Pfad in der Datenbank ab.
+    </p>
+    <p xml:lang="de">
+      Nach dem Finden der Duplikate öffnet sich ein neues Fenster. In dem kann man nun
+    </p>
+    <ul xml:lang="de">
+      <li>Bilder im Bildbetrachter des Rechners öffnen</li>
+      <li>Bilder löschen (das 'Master' Bild kann nicht gelöscht werden)</li>
+      <li>Bilder vergleichen (über Differenz-Methode bzw. XOR-Methode)</li>
+      <li>Ein Bild zum 'Master'-Bild machen.</li>
+      <li>Manuell angeben, dass ein Vergleichspaar doch keine Duplikate sind (diese Information wird auch in der Datenbank gespeichert).</li>
+    </ul>
+    <p xml:lang="de">
+      Es lassen sich alle manuellen "Kein-Duplikat" -Bilderpaare anzeigen und diese Indikation wieder entfernen.
+    </p>
+    <p xml:lang="de">
+      Das Suchen nach Duplikaten benötigt mehrere Programm-Schritte. Das Programm zeigt ganz unten den aktuellen Fortschritt an.
+    </p>
+
+  </description>
+
+  <categories>
+    <category>Pictures</category>
+  </categories>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+
+  <developer id="de.github.hartmutgh">
+    <name>Hartmut-GH</name>
+  </developer>
+
+<!--
+  <url type="homepage">https://github.com/Hartmut-gh/Picture_Duplicates/</url>
+-->
+  <url type="homepage">https://.com/</url>
+
+  <releases>
+    <release version="1.0.1" date="2026-09-14">
+      <description>
+      <p>Added: Calculated 'canny' value of an image to the picture database to speed up subsequent runs.</p>
+      <p>Added: General option to exclude pictures from comparison, which are in the same folder or only compare pictures which are in the same folder.</p>
+      <p>Added: Option per folder, whether to exclude pictures from comparison, which are in the this folder.</p>
+      <p>Added: Show a list of manual 'No Duplicates'. Here you can reset the 'No-Duplicate' mark</p>
+      <p>Added: Language Switch</p>
+      <p xml:lang="de">Berechneter 'canny' Wert eines Bildes wird nun in der Bilder-Datenbank gespeichert um nachfolgende Durchläufe zu beschleunigen.</p>
+      <p xml:lang="de">Allgemeine Option hinzugefügt, entweder zum Ausschließen von Bildern vom Vergleich, die im selben Ordner sind, oder um nur Bilder zu vergelciehn, die im selben Ordner sind.</p>
+      <p xml:lang="de">Per Ordner: Option zum Ausschließen von Bildern vom Vergleich, die in diesem selben Ordner sind.</p>
+      <p xml:lang="de">Es kann jetzt eine Liste aller manuellen 'Kein Duplikat' angezeigt werden, in welcher diese Merkmal wieder gelöscht werden kann.</p>
+      <p xml:lang="de">Hinzugefügt: Sprach-Schalter</p>
+    </description>
+    </release>
+
+    <release version="1.0.0" date="2026-08-11">
+      <description>
+      <p>First official version.</p>
+      <p xml:lang="de">Erste offizielle Version.</p>
+    </description>
+    </release>
+  </releases>
+
+<!--
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/01_MainWindow.png</image>
+      <caption>Hauptfenster der Anwendung</caption>
+    </screenshot>
+
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/02_Manage_Kategorien_01_Main.png</image>
+      <caption>Kategorien verwalten</caption>
+    </screenshot>
+  </screenshots>
+-->
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+  </content_rating>
+
+</component>
