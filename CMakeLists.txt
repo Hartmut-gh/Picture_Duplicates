@@ -256,6 +256,10 @@ install(
     FILES de.hartmutgh.Picture_Duplicates.desktop
     DESTINATION share/applications
 )
+install(
+    FILES io.github.hartmut_gh.Picture_Duplicates.desktop
+    DESTINATION share/applications
+)
 # ----------------------------------------------------------------------------------------------
 
 set(COPY_FLATPAK_COMMAND)
