@@ -72,4 +72,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/hartmut-gh/Picture_Duplicates.git
-        commit: 8656d53
+        commit: dc72aa2

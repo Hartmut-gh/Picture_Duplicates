@@ -146,19 +146,12 @@
     </release>
   </releases>
 
-<!--
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/01_MainWindow.png</image>
       <caption>Hauptfenster der Anwendung</caption>
     </screenshot>
-
-    <screenshot>
-      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/refs/heads/main/screenshots/02_Manage_Kategorien_01_Main.png</image>
-      <caption>Kategorien verwalten</caption>
-    </screenshot>
   </screenshots>
--->
 
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
