@@ -23,20 +23,25 @@ See below
 - Zu jedem "Set" können ein oder mehrere Verzeichnisse hinzugefügt werden. Die Unterverzeichnisse von denen werden automatisch auch hinzugefügt.
 
 - Für jedes Verzeichnis kann ausgewählt werden, ob es
-    - eingeschlossen ist.
-    - eingeschlossen und ein Referenz-Verzeichnis ist.
-    - ausgeschlossen ist.
+     - eingeschlossen ist.
+     - eingeschlossen und ein Referenz-Verzeichnis ist.
+     - ausgeschlossen ist.
+
+  Dazu klickt man auf das 'Status' Feld in der Zeile des jeweiligen Verzeichnisses. Mit einem 'Umschalt'-Klick wird der Status des Verzeichnisse und aller
+  seiner Unter-Ordner geändert.
 
 - Zudem kann pro Verzeichnis ausgewählt werden, ob innerhalb des Verzeichnisses nach Duplikaten gesucht wird (beide Dateien sind im selben Verzeichnis).
 
 - Auch für alle Ordner kann generell ausgewählt werden (dann gelten nicht die individuelle Einstellung siehe die Zeile über dieser)
-    - Generell keine Duplikats-Sucher im selben Verzeichnis
-    - Nur Duplikats-Sucher im selben Verzeichnis
+     - Generell keine Duplikats-Sucher im selben Verzeichnis
+     - Nur Duplikats-Sucher im selben Verzeichnis
+  Dazu klickt (oder 'Umschalt'-klickt zum Ändern der Unterverzeichnisse wie oben) man auf das 'Aus.=Verz.' Feld des Verzeichnisses.
 
 - Zur Duplikatssuche werden bis zu drei Verfahren angewandt. Für jedes Verfahren können Grenzen gesetzt werden.
      1. pHash - Abstand     (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)
      2. canny - Unterschied (unterhalb einer Grenze: Immer ein Duplikat, oberhalb einer Grenze: Niemals ein Duplikat)
      3. ORB   - Unterschied (oberhalb einer Grenze: ein Duplikat)
+
   Wenn ein Verfahren bereits ein eindeutiges Ergebnis liefert, wird kein weiteres Verfahren mehr verwendet. Dadurch wird viel Rechenleistung gespart.
   pHash geht am schnellsten, canny bereits etwas langsamer und ORB ist sehr rechenintensiv.
 
@@ -53,11 +58,11 @@ See below
   Das Programm erkennt so auch, on eine Datei inzwischen in einem anderen Ordner ist und speichert den neuen Pfad in der Datenbank ab.
 
 - Nach dem Finden der Duplikate öffnet sich ein neues Fenster. In dem kann man nun
-    - Bilder im Bildbetrachter des Rechners öffnen
-    - Bilder löschen (das 'Master' Bild kann nicht gelöscht werden)
-    - Bilder vergleichen (über Differenz-Methode bzw. XOR-Methode)
-    - Ein Bild zum 'Master'-Bild machen.
-    - Manuell angeben, dass ein Vergleichspaar doch keine Duplikate sind (diese Information wird auch in der Datenbank gespeichert).
+     - Bilder im Bildbetrachter des Rechners öffnen
+     - Bilder löschen (das 'Master' Bild kann nicht gelöscht werden)
+     - Bilder vergleichen (über Differenz-Methode bzw. XOR-Methode)
+     - Ein Bild zum 'Master'-Bild machen.
+     - Manuell angeben, dass ein Vergleichspaar doch keine Duplikate sind (diese Information wird auch in der Datenbank gespeichert).
 
 - Es lassen sich alle manuellen "Kein-Duplikat" -Bilderpaare anzeigen und diese Indikation wieder entfernen.
 
@@ -123,15 +128,19 @@ Siehe die Datei `LICENSE` für den vollständigen Lizenztext.
 - You can add one or more folders to each set. Subfolders are added automatically.
 
 - You can select for each folder, whether to
-    - include it.
-    - use it as reference folder.
-    - exclude it.
+     - include it.
+     - use it as reference folder.
+     - exclude it.
+
+  To change this selection you need to click on the 'status' field of the folder. By 'Shift'-Click the status of the folder and all its subfolders are changed.
 
 - You can also select whether duplicates should not be searched for within the same folder (i.e. both files are in the same folder).
 
 - There are three calculation methods for finding duplicates. For each method, you can define thresholds:
-   - Do not search for duplicates within the same folder.
-   - Only search for duplicates within the same folder.
+     - Do not search for duplicates within the same folder.
+     - Only search for duplicates within the same folder.
+
+  To change this you need to click (or 'Shift'-click to include the subfolders like above) on the 'Excl.Eq.Folder' field of the folder.
 
 - There are three calculation methods for finding duplicates. For each method, you can define thresholds:
      1. **pHash – distance** (below the threshold: Always a duplicate, above the threshold: Never a duplicate)
@@ -156,11 +165,11 @@ Siehe die Datei `LICENSE` für den vollständigen Lizenztext.
   The program can also detect when a file has been moved to another folder. In this case, the path information is updated in the database.
 
 - After duplicates have been found, a new window is displayed. Here you can
-    - open a picture in the default picture viewer of your PC.
-    - delete a picture (the 'master' picture cannot be deleted)
-    - compare pictures (using difference and XOR methods)
-    - change a picture to 'master'
-    - manually define a picture pair as not being duplicates.
+     - open a picture in the default picture viewer of your PC.
+     - delete a picture (the 'master' picture cannot be deleted)
+     - compare pictures (using difference and XOR methods)
+     - change a picture to 'master'
+     - manually define a picture pair as not being duplicates.
 
 - You can display a list of all "No Duplicate" pairs and remove this indicator if needed.
 
@@ -216,5 +225,3 @@ A Flatpak version is available here: [Releases](../../releases)
 This project uses the **GNU General Public License v3.0 or later (GPL-3.0-or-later)**.
 
 See the file `LICENSE` for the complete license text.
-
-

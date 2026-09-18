@@ -17,8 +17,12 @@
       This program identifies duplicated pictures and to offer the user possibilities of opening the picture in an external
       picture viewer, deletion, manual quick comparison and manual indicating of non-duplicate.
     </p>
+    <p xml:lang="en">
+      This program identifies duplicated pictures and to offer the user possibilities of opening the picture in an external
+      picture viewer, deletion, manual quick comparison and manual indicating of non-duplicate.
+    </p>
     <p xml:lang="de">
-      Dieses Program erkenne Bilder-Duplikate und bietet an, diese in einem extern Bildbetrachter-Programm zu öffnen, zu löschen, manuell
+      Dieses Program erkennt Bilder-Duplikate und bietet an, diese in einem extern Bildbetrachter-Programm zu öffnen, zu löschen, manuell
       schnell miteindern zu vergleichen un gegebenfalls als "Nicht-Duplkat" zu kennzeichnen.
     </p>
 
@@ -51,6 +55,13 @@
       <li xml:lang="de">eingeschlossen und ein Referenz-Verzeichnis ist.</li>
       <li xml:lang="de">ausgeschlossen ist.</li>
     </ul>
+    <p xml:lang="en">
+      To change this selection you need to click on the 'status' field of the folder. By 'Shift'-Click the status of the folder and all its subfolders are changed.
+    </p>
+    <p xml:lang="de">
+      Dazu klickt man auf das 'Status' Feld in der Zeile des jeweiligen Verzeichnisses. Mit einem 'Umschalt'-Klick wird der Status des Verzeichnisse
+      und aller seiner Unter-Ordner geändert.
+    </p>
 
     <p xml:lang="en">
       You can also select whether duplicates should not be searched for within the same folder (i.e. both files are in the same folder).
@@ -72,6 +83,12 @@
       <li xml:lang="de">Generell keine Duplikats-Sucher im selben Verzeichnis</li>
       <li xml:lang="de">Nur Duplikats-Sucher im selben Verzeichnis</li>
     </ul>
+    <p xml:lang="en">
+      To change this you need to click (or 'Shift'-click to include the subfolders like above) on the 'Excl.Eq.Folder' field of the folder.
+    </p>
+    <p xml:lang="de">
+      Dazu klickt (oder 'Umschalt'-klickt zum Ändern der Unterverzeichnisse wie oben) man auf das 'Aus.=Verz.' Feld des Verzeichnisses.
+    </p>
 
     <p xml:lang="en">
       There are three calculation methods for finding duplicates. For each method, you can define thresholds:
@@ -196,6 +213,13 @@
   <url type="homepage">https://github.com/Hartmut-gh/Picture_Duplicates/</url>
 
   <releases>
+    <release version="1.0.2" date="2026-09-18">
+      <description>
+        <p>Corrected: New DB - column 'canny' was missing in 'Features' table</p>
+        <p xml:lang="de">Korrigiert: Neue DB - Spalte 'canny' fehlte in 'Features' Tabelle</p>
+      </description>
+    </release>
+
     <release version="1.0.1" date="2026-09-14">
       <description>
       <p>Added: Calculated 'canny' value of an image to the picture database to speed up subsequent runs.</p>
@@ -221,7 +245,7 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/dc72aa2/screenshots/01_MainWindow.png</image>
+      <image>https://raw.githubusercontent.com/Hartmut-gh/Picture_Duplicates/c409be1/screenshots/01_MainWindow.png</image>
       <caption>Hauptfenster der Anwendung</caption>
     </screenshot>
   </screenshots>

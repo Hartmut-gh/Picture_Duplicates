@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
     // -------------------------------------------------------------------------------------------
-    QString version = "v1.0.1";  // Current version of this program !!!!!!!!!!!!!!!!!!!!!!
+    QString version = "v1.0.2";  // Current version of this program !!!!!!!!!!!!!!!!!!!!!!
     // -------------------------------------------------------------------------------------------
 
     for (int i = 1; i < argc; ++i) {

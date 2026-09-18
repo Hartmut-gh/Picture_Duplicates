@@ -111,7 +111,7 @@ MainWindow::MainWindow(QString v, QWidget *parent)
     progressBar->setValue(0);     // Startwert
     progressBar->setStyleSheet("QProgressBar::chunk { background-color: gray; }");
     volumeLabel = new QLabel(qtTrId("mainwindow.label.progressNoMax"));
-    volumeLabel->setFixedWidth(125);
+    volumeLabel->setFixedWidth(140);
     volumeLabel->setAlignment(Qt::AlignCenter);
 
     topLayout = new QHBoxLayout;
@@ -2045,6 +2045,7 @@ bool MainWindow::initializePictureDB()
                 KeyPoints   BLOB,
                 Descriptors BLOB,
                 pHash       INTEGER,
+                canny       BLOB,
                 FOREIGN KEY(file_id) REFERENCES Files(id) ON DELETE CASCADE
             );
         )";
@@ -3941,7 +3942,7 @@ void MainWindow::writeOrbAndPHashToDB(QSqlDatabase &db, FileEntry &entry)
     }
 
     if (!q2.exec()) {
-         qWarning() << "DB update failed:" << q2.lastError();
+         qWarning() << "DB update failed (table Features):" << q2.lastError();
     }
 }
 
